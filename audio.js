@@ -1,5 +1,11 @@
+if (window.audiojs === true){
+  window.audiojs = false
+  $("body").off('mousemove')
+  $("body").off('click')
+}
+window.audiojs = true;
 $preElement = null
-$( "body" ).mousemove(function( event ) {
+$( "body" ).on('mousemove', function( event ) {
   if ($preElement !== null){
     $preElement.css('outline', '')
   }
@@ -8,7 +14,7 @@ $( "body" ).mousemove(function( event ) {
   $preElement = $target
 })
 
-$("body").click(function(event){
+$("body").on('click', function(event){
   if ($preElement === null){
     return 0;
   }
