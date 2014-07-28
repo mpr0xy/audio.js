@@ -8,7 +8,7 @@ javascript:(function(){
   try{
     var x=document.createElement('SCRIPT');
     x.type='text/javascript';
-    x.src=CLIP_HOST+'/YNoteClipper.js';
+    x.src='//raw.githubusercontent.com/mpr0xy/audio.js/master/audio.js';
     x.charset='utf-8';
     document.getElementsByTagName('head')[0].appendChild(x);
   }
