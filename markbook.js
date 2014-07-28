@@ -1,15 +1,18 @@
 javascript:(function(){
   if (window.audiojs === true){
     window.audiojs = false;
-    $("body").off('mousemove');
-    $("body").off('click');
+    $('body').off('mousemove');
+    $('body').off('click');
+    if (window.$preElement){
+      window.$preElement.css('outline', '');  
+    } 
   }
   else{
     window.audiojs = true;
     if(!window.jQuery && !jQuery) {
     var scr = document.createElement('script');
-    scr.type="text/javascript";
-    scr.src="//lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js";
+    scr.type='text/javascript';
+    scr.src='//lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js';
     document.getElementsByTagName('head')[0].appendChild(scr);
     }  
     try{

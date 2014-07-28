@@ -34,12 +34,25 @@
         </h1>
         <p class="lead">让你在看英文文章时，可以轻易选取一段然后读出来．</p>
         <div class="over-div">
-          <a class="btn btn-large btn-success bookmark" onclick="alert('请将此链接拖拽到书签栏'); return false;" href="javascript:(function(){if (window.audiojs === true){window.audiojs = false;$('body').off('mousemove');$('body').off('click');}else{window.audiojs = true;if(!window.jQuery && !jQuery){var scr = document.createElement('script');scr.type='text/javascript';scr.src='//lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js';document.getElementsByTagName('head')[0].appendChild(scr);}try{var x=document.createElement('SCRIPT');x.type='text/javascript';x.src='//raw.githubusercontent.com/mpr0xy/audio.js/master/audio.js';x.charset='utf-8';document.getElementsByTagName('body')[0].appendChild(x);}catch(e){alert(e);}}})();">Audio.js</a>
+          <a class="btn btn-large btn-success bookmark" onclick="alert('请将此链接拖拽到书签栏'); return false;" href="javascript:(function(){if (window.audiojs === true){window.audiojs = false;$('body').off('mousemove');$('body').off('click');if (window.$preElement){window.$preElement.css('outline','');}}else{window.audiojs = true;if(!window.jQuery && !jQuery){var scr = document.createElement('script');scr.type='text/javascript';scr.src='//lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js';document.getElementsByTagName('head')[0].appendChild(scr);}try{var x=document.createElement('SCRIPT');x.type='text/javascript';x.src='//raw.githubusercontent.com/mpr0xy/audio.js/master/audio.js';x.charset='utf-8';document.getElementsByTagName('body')[0].appendChild(x);}catch(e){alert(e);}}})();">Audio.js</a>
           <a class="btn btn-large btn-success overlay">把我拖拽到书签栏</a>
         </div>
         
       </div>
 
+      <hr>
+      <div class='intro'>
+        <p>拖拽完成后，点击新生成得Audio.js书签．鼠标移动到下面段落并框住，点击鼠标左键即可朗读．再点击一次Audio.js书签，就取消了框住功能．</p>
+      </div>
+      <div class="jumbotron">
+        <p>
+          jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript
+        </p>
+      </div>
+      <div class="intro">
+      <p>使用截图</p>
+      <img src="http://ww2.sinaimg.cn/mw690/ec7b00fcjw1eisvo00byij20mq0d5gns.jpg"/>
+      </div>
     </div>
 
 

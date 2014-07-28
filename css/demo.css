@@ -27,14 +27,6 @@ body {
   padding: 14px 24px;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 60px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
-
 .overlay {
   position: absolute;
   pointer-events: none;
@@ -50,4 +42,8 @@ body {
 .over-div {
   display: inline-block;
   position: relative;
+}
+
+.intro p {
+  font-size: 21px;
 }
