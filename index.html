@@ -7,7 +7,7 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -15,24 +15,49 @@
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link href="/css/demo.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3">
-          <ul class="nav nav-pills nav-stacked"         role="tablist" style="width:200px">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-          </ul>          
-        </div>
-        <div class="col-sm-8">
-          sdfaf
-        </div>
+    <div class="container-narrow">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="https://github.com/mpr0xy/audio.js">Github</a></li>
+          <li><a href="http://blog.mpr0xy.com">mpr0xy</a></li>
+        </ul>
+        <h3 class="muted">Audio.js</h3>
       </div>
+      <hr>
+
+      <div class="jumbotron">
+        <h1>
+          Audio<span style="font-weight: normal;">.js</span>
+        </h1>
+        <p class="lead">让你在看英文文章时，可以轻易选取一段然后读出来．</p>
+        <div class="over-div">
+          <a class="btn btn-large btn-success bookmark" onclick="alert('请将此链接拖拽到书签栏'); return false;" href="javascript:(function(){if (window.audiojs === true){window.audiojs = false;$('body').off('mousemove');$('body').off('click');}else{window.audiojs = true;if(!window.jQuery && !jQuery){var scr = document.createElement('script');scr.type='text/javascript';scr.src='//lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js';document.getElementsByTagName('head')[0].appendChild(scr);}try{var x=document.createElement('SCRIPT');x.type='text/javascript';x.src='//raw.githubusercontent.com/mpr0xy/audio.js/master/audio.js';x.charset='utf-8';document.getElementsByTagName('body')[0].appendChild(x);}catch(e){alert(e);}}})();">Audio.js</a>
+          <a class="btn btn-large btn-success overlay">把我拖拽到书签栏</a>
+        </div>
+        
+      </div>
+
     </div>
+
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script>
+      /*$(function(){
+        $bookmark = $('.bookmark')
+        x = $bookmark.offset();
+        $a = $('<a/>').addClass('btn btn-large btn-success overlay')
+        $a.offset(x)
+        $a.text('把我拖拽到书签栏')
+        $('body').append($a)
+      })*/
+    </script>
   </body>
 </html>
