@@ -1,8 +1,8 @@
 javascript:(function(){
   if (window.audiojs === true){
     window.audiojs = false;
-    $('body').off('mousemove');
-    $('body').off('click');
+    $('body').unbind('mousemove');
+    $('body').unbind('click');
     if (window.$preElement){
       window.$preElement.css('outline', '');  
     } 
