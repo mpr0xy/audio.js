@@ -47,3 +47,13 @@ body {
 .intro p {
   font-size: 21px;
 }
+
+.clip {
+  margin: 10px;
+  color: rgba(142, 151, 157, 0.9);
+}
+
+.clip p {
+  font-size: 16px;
+}
+
