@@ -1,5 +1,5 @@
 $preElement = null
-$( "body" ).on('mousemove', function( event ) {
+$( "body" ).mousemove(function( event ) {
   if ($preElement !== null){
     $preElement.css('outline', '')
   }
@@ -8,7 +8,7 @@ $( "body" ).on('mousemove', function( event ) {
   $preElement = $target
 })
 
-$("body").on('click', function(event){
+$("body").click(function(event){
   if ($preElement === null){
     return 0;
   }
