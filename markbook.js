@@ -3,6 +3,7 @@ javascript:(function(){
     window.audioJs.runing = false;
     $('body').unbind('mousemove');
     $('body').unbind('click');
+    $('body').css('background-color', window.audioJs.bodyColor);
     if (window.audioJs.preElement){
       window.audioJs.preElement.css('outline', '');  
     } 

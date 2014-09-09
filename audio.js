@@ -2,11 +2,18 @@ var audioJs = function(){
   this.preElement = null;
   this.runing = false;
   this.target = null;
+  this.bodyColor = null;
 }
 
 audioJs.prototype.run = function(){
   var self = this;
   self.runing = true;
+
+  if (!self.bodyColor){
+    self.bodyColor = $("body").css('background-color');
+  }
+  $("body").css('background-color', 'rgb(240,222,222)');
+  
   $( "body" ).mousemove(function( event ) {
     if (self.preElement !== null){
       self.preElement.css('outline', '')
