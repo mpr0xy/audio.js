@@ -33,7 +33,7 @@ javascript:(function(){
           if(!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete'){
             loadAudioJs();
           }
-        }
+        };
         document.getElementsByTagName('head')[0].appendChild(scr);
       }
       catch(e){
