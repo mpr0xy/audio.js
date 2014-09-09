@@ -36,12 +36,26 @@
         </h1>
         <p class="lead">让你在看英文文章时，可以轻易选取一段然后读出来．</p>
         <div class="over-div">
-          <a class="btn btn-large btn-success bookmark" onclick="alert('请将此链接拖拽到书签栏'); return false;" href="javascript:(function(){if (window.audioJs && window.audioJs.runing){window.audioJs.runing = false;$('body').unbind('mousemove');$('body').unbind('click');$('body').css('background-color',window.audioJs.bodyColor);if (window.audioJs.preElement){window.audioJs.preElement.css('outline','');}}else if (window.audioJs && !window.audioJs.runing){window.audioJs.run();}else{if(!window.jQuery){try{var scr = document.createElement('script');scr.type='text/javascript';scr.src='//lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js';scr.onload = script.onreadystatechange = function(){if(!this.readyState || this.readyState=='loaded' || this.readyState=='complete'){loadAudioJs();}}document.getElementsByTagName('head')[0].appendChild(scr);}catch(e){alert(e);}}else{loadAudioJs();}}function loadAudioJs(){try{var x=document.createElement('SCRIPT');x.type='text/javascript';x.src='//raw.githubusercontent.com/mpr0xy/audio.js/master/audio.js';x.charset='utf-8';document.getElementsByTagName('body')[0].appendChild(x);}catch(e){alert(e);}}})();">Audio.js</a>
+          <a class="btn btn-large btn-success bookmark" onclick="alert('请将此链接拖拽到书签栏'); return false;" href="javascript:(function(){function loadAudioJs(){try{var x=document.createElement('SCRIPT');x.type='text/javascript';x.src='//raw.githubusercontent.com/mpr0xy/audio.js/master/audio.js';x.charset='utf-8';document.getElementsByTagName('body')[0].appendChild(x);}
+catch(e){alert(e);}}
+if(window.audioJs&&window.audioJs.runing){window.audioJs.runing=false;$('body').unbind('mousemove');$('body').unbind('click');$('body').css('background-color',window.audioJs.bodyColor);if(window.audioJs.preElement){window.audioJs.preElement.css('outline','');}}
+else if(window.audioJs&&!window.audioJs.runing){window.audioJs.run();}
+else{if(!window.jQuery){try{var scr=document.createElement('script');scr.type='text/javascript';scr.src='//lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js';scr.onload=script.onreadystatechange=function(){if(!this.readyState||this.readyState=='loaded'||this.readyState=='complete'){loadAudioJs();}}
+document.getElementsByTagName('head')[0].appendChild(scr);}
+catch(e){alert(e);}}
+else{loadAudioJs();}}})();">Audio.js</a>
           <a class="btn btn-large btn-success overlay">把我拖拽到书签栏</a>
         </div>
         <div class="clip">
           <p>如果不能拖拽，请点击下面按钮复制代码自行添加到浏览器书签/收藏夹</p>
-          <button id="copy-button" data-clipboard-text="javascript:(function(){if (window.audioJs && window.audioJs.runing){window.audioJs.runing = false;$('body').unbind('mousemove');$('body').unbind('click');$('body').css('background-color',window.audioJs.bodyColor);if (window.audioJs.preElement){window.audioJs.preElement.css('outline','');}}else if (window.audioJs && !window.audioJs.runing){window.audioJs.run();}else{if(!window.jQuery){try{var scr = document.createElement('script');scr.type='text/javascript';scr.src='//lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js';scr.onload = script.onreadystatechange = function(){if(!this.readyState || this.readyState=='loaded' || this.readyState=='complete'){loadAudioJs();}}document.getElementsByTagName('head')[0].appendChild(scr);}catch(e){alert(e);}}else{loadAudioJs();}}function loadAudioJs(){try{var x=document.createElement('SCRIPT');x.type='text/javascript';x.src='//raw.githubusercontent.com/mpr0xy/audio.js/master/audio.js';x.charset='utf-8';document.getElementsByTagName('body')[0].appendChild(x);}catch(e){alert(e);}}})();" title="Click to copy me.">点击复制</button>
+          <button id="copy-button" data-clipboard-text="javascript:(function(){function loadAudioJs(){try{var x=document.createElement('SCRIPT');x.type='text/javascript';x.src='//raw.githubusercontent.com/mpr0xy/audio.js/master/audio.js';x.charset='utf-8';document.getElementsByTagName('body')[0].appendChild(x);}
+catch(e){alert(e);}}
+if(window.audioJs&&window.audioJs.runing){window.audioJs.runing=false;$('body').unbind('mousemove');$('body').unbind('click');$('body').css('background-color',window.audioJs.bodyColor);if(window.audioJs.preElement){window.audioJs.preElement.css('outline','');}}
+else if(window.audioJs&&!window.audioJs.runing){window.audioJs.run();}
+else{if(!window.jQuery){try{var scr=document.createElement('script');scr.type='text/javascript';scr.src='//lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js';scr.onload=script.onreadystatechange=function(){if(!this.readyState||this.readyState=='loaded'||this.readyState=='complete'){loadAudioJs();}}
+document.getElementsByTagName('head')[0].appendChild(scr);}
+catch(e){alert(e);}}
+else{loadAudioJs();}}})();" title="Click to copy me.">点击复制</button>
         </div>
         
       </div>
