@@ -1,21 +1,23 @@
 var audioJs = function(){
   this.preElement = null;
   this.runing = false;
+  this.target = null;
 }
 
 audioJs.prototype.run = function(){
-  this.runing = true;
+  var self = this;
+  self.runing = true;
   $( "body" ).mousemove(function( event ) {
-    if (this.preElement !== null){
-      this.preElement.css('outline', '')
+    if (self.preElement !== null){
+      self.preElement.css('outline', '')
     }
-    $target = $(event.target)
-    $target.css('outline', '#00ff00 solid')
-    this.preElement = $target
+    self.target = $(event.target)
+    self.target.css('outline', '#00ff00 solid')
+    self.preElement = self.target;
   })
 
   $("body").click(function(event){
-    if (this.preElement === null){
+    if (self.preElement === null){
       return 0;
     }
     context = this.preElement.text()
@@ -57,8 +59,7 @@ audioJs.prototype.run = function(){
     return url
   }
 }
-
-window.audioJs = new audioJs();
-window.audioJs.run();
-
+var audiojs = new audioJs();
+audiojs.run();
+window.audioJs = audiojs;
 
