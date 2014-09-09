@@ -27,7 +27,7 @@ audioJs.prototype.run = function(){
     if (self.preElement === null){
       return 0;
     }
-    context = this.preElement.text()
+    context = self.preElement.text()
     context = context.replace(/\n[^a-zA-Z_0-9]*/g, '\n')
     context = context.replace(/\s*\n/g, '\n')
     contextArray = context.split(/\n/)
