@@ -16,7 +16,7 @@ javascript:(function(){
         var scr = document.createElement('script');
         scr.type = 'text/javascript';
         scr.src = '//lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js';
-        scr.onload = script.onreadystatechange = function(){
+        scr.onload = scr.onreadystatechange = function(){
           if (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete'){
             loadAudioJs();
           }
