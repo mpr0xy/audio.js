@@ -1,24 +1,33 @@
 var audioJs = function(){
   this.preElement = null;
   this.runing = false;
+  this.target = null;
+  this.bodyColor = null;
 }
 
 audioJs.prototype.run = function(){
-  this.runing = true;
+  var self = this;
+  self.runing = true;
+
+  if (!self.bodyColor){
+    self.bodyColor = $("body").css('background-color');
+  }
+  $("body").css('background-color', 'rgb(240,222,222)');
+  
   $( "body" ).mousemove(function( event ) {
-    if (this.preElement !== null){
-      this.preElement.css('outline', '')
+    if (self.preElement !== null){
+      self.preElement.css('outline', '')
     }
-    $target = $(event.target)
-    $target.css('outline', '#00ff00 solid')
-    this.preElement = $target
+    self.target = $(event.target)
+    self.target.css('outline', '#00ff00 solid')
+    self.preElement = self.target;
   })
 
   $("body").click(function(event){
-    if (this.preElement === null){
+    if (self.preElement === null){
       return 0;
     }
-    context = this.preElement.text()
+    context = self.preElement.text()
     context = context.replace(/\n[^a-zA-Z_0-9]*/g, '\n')
     context = context.replace(/\s*\n/g, '\n')
     contextArray = context.split(/\n/)
@@ -57,8 +66,6 @@ audioJs.prototype.run = function(){
     return url
   }
 }
-
-window.audioJs = new audioJs();
-window.audioJs.run();
-
-
+var audiojs = new audioJs();
+audiojs.run();
+window.audioJs = audiojs;
