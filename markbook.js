@@ -1,8 +1,21 @@
 javascript:(function(){
+  function loadAudioJs(){
+   try{
+      var x=document.createElement('SCRIPT');
+      x.type='text/javascript';
+      x.src='//mpr0xy.github.io/audio.js/audio.js';
+      x.charset='utf-8';
+      document.getElementsByTagName('body')[0].appendChild(x);
+    }
+    catch(e){
+      alert(e);
+    } 
+  }
   if (window.audioJs && window.audioJs.runing){
     window.audioJs.runing = false;
     $('body').unbind('mousemove');
     $('body').unbind('click');
+    $('body').css('background-color', window.audioJs.bodyColor);
     if (window.audioJs.preElement){
       window.audioJs.preElement.css('outline', '');  
     } 
@@ -31,6 +44,7 @@ javascript:(function(){
       loadAudioJs();
     }   
   }
+
 
   function loadAudioJs(){
    try {
