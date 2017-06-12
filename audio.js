@@ -61,7 +61,7 @@ audioJs.prototype.run = function(){
     context = context.replace(/[^a-zA-Z_0-9]/g, ' ')
     context = context.toLowerCase()
     var es_context = encodeURIComponent(context)
-    var url="//dict.youdao.com/speech?audio=" + es_context
+    var url="http://dict.youdao.com/dictvoice?audio=" + es_context
     //var url = "http://translate.google.cn/translate_tts?ie=UTF-8&q="+ es_context +"&tl=en&total="+ total +"&idx="+ index +"&textlen=" + es_context.length + "&client=t&prev=input"
     return url
   }
